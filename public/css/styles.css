@@ -29,8 +29,10 @@
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
+  --space-10: 2.5rem;
   --space-12: 3rem;
   --space-16: 4rem;
   --space-24: 6rem;
@@ -1007,7 +1009,8 @@ address {
 .site-footer__grid {
   display: grid;
   gap: var(--space-10);
-  padding-inline: var(--space-2);
+  padding-inline: var(--space-4);
+  padding-bottom: var(--space-4);
 }
 
 @media (min-width: 768px) {
@@ -1059,19 +1062,20 @@ address {
 }
 
 .site-footer__rule {
-  margin-block: var(--space-12) var(--space-10);
+  margin-block: var(--space-16);
 }
 
 .site-footer__nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-4) var(--space-8);
-  padding-inline: var(--space-4);
-  margin-top: var(--space-2);
+  padding-inline: var(--space-6);
   font-size: 0.875rem;
 }
 
 .site-footer__nav a {
+  display: inline-block;
   color: rgb(92 77 66 / 0.8);
   text-decoration: none;
 }
@@ -1081,8 +1085,8 @@ address {
 }
 
 .site-footer__copy {
-  margin-top: var(--space-8);
-  padding-inline: var(--space-4);
+  margin-top: var(--space-10);
+  padding-inline: var(--space-6);
   font-size: 0.75rem;
   color: rgb(92 77 66 / 0.5);
 }
@@ -1346,8 +1350,24 @@ address {
   color: var(--clay);
 }
 
-.link-arrow::after {
-  content: " \u2192";
+.text-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--honey);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover {
+  color: var(--clay);
+}
+
+.text-link--italic {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-style: italic;
+  font-weight: 400;
 }
 
 /* --- Process showcase --- */
@@ -1405,10 +1425,14 @@ address {
 .split-block__title {
   font-size: clamp(1.75rem, 4vw, 2.25rem);
   color: var(--bark);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-8);
 }
 
-.split-block__content .link-arrow {
+.split-block__content .prose {
+  margin-top: var(--space-2);
+}
+
+.split-block__content .text-link {
   display: inline-block;
   margin-top: var(--space-6);
 }
@@ -1700,7 +1724,11 @@ address {
 }
 
 .contact-note {
-  margin-top: var(--space-8);
+  margin: var(--space-8) 0 0;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
   font-size: 0.9rem;
   color: var(--bark-soft);
   line-height: 1.6;
