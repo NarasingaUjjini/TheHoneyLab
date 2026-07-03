@@ -995,7 +995,7 @@ address {
 
 /* --- Footer --- */
 .site-footer {
-  padding-block: var(--space-12);
+  padding-block: var(--space-16);
   background: var(--kraft);
   background-image:
     linear-gradient(175deg, rgb(255 255 255 / 0.35) 0%, transparent 45%),
@@ -1007,11 +1007,14 @@ address {
 .site-footer__grid {
   display: grid;
   gap: var(--space-10);
+  padding-inline: var(--space-2);
 }
 
 @media (min-width: 768px) {
   .site-footer__grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-12);
+    padding-inline: var(--space-4);
   }
 }
 
@@ -1056,13 +1059,15 @@ address {
 }
 
 .site-footer__rule {
-  margin-block: var(--space-10);
+  margin-block: var(--space-12) var(--space-10);
 }
 
 .site-footer__nav {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4) var(--space-6);
+  gap: var(--space-4) var(--space-8);
+  padding-inline: var(--space-4);
+  margin-top: var(--space-2);
   font-size: 0.875rem;
 }
 
@@ -1076,7 +1081,8 @@ address {
 }
 
 .site-footer__copy {
-  margin-top: var(--space-6);
+  margin-top: var(--space-8);
+  padding-inline: var(--space-4);
   font-size: 0.75rem;
   color: rgb(92 77 66 / 0.5);
 }
@@ -1243,10 +1249,16 @@ address {
 }
 
 .showcase-card__body {
-  padding: var(--space-5);
+  padding: var(--space-6);
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .showcase-card__body {
+    padding: var(--space-6) var(--space-8);
+  }
 }
 
 .showcase-card__title {
@@ -1295,6 +1307,27 @@ address {
   align-items: center;
   gap: var(--space-6);
   margin-top: var(--space-10);
+}
+
+.section-cta--stack {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+  margin-top: var(--space-12);
+  padding-inline: var(--space-2);
+}
+
+.section-cta__sub {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--honey);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.section-cta__sub:hover {
+  color: var(--clay);
 }
 
 .section-cta--center {
@@ -1668,7 +1701,6 @@ address {
 
 .contact-note {
   margin-top: var(--space-8);
-  padding: var(--space-5);
   font-size: 0.9rem;
   color: var(--bark-soft);
   line-height: 1.6;
