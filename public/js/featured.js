@@ -25,7 +25,7 @@
       var size = product.sizes[1] || product.sizes[0];
       return (
         '<article class="showcase-card">' +
-        '<a class="showcase-card__link" href="/honey.html#product-' +
+        '<a class="showcase-card__link" href="honey.html#product-' +
         product.id +
         '">' +
         '<div class="showcase-card__image showcase-card__image--' +

@@ -99,7 +99,7 @@
       formatPrice(product.pricePerLb) +
       " / lb</p>" +
       "</footer>" +
-      '<a class="catalog-entry__link" href="/products.html" data-add-to-cart="' +
+      '<a class="catalog-entry__link" href="products.html" data-add-to-cart="' +
       product.id +
       '">' +
       (product.available ? "Order this batch" : "Notify me") +
