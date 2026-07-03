@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About The Honey Lab — a family-run honey operation in El Cajon, California." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>About — The Honey Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="about">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-logo" href="/">The Honey Lab</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul class="site-nav__list">
+            <li><a href="/about.html" data-nav="about">About</a></li>
+            <li><a href="/honey.html" data-nav="honey">Honey</a></li>
+            <li><a href="/products.html" data-nav="products">Shop</a></li>
+            <li><a href="/process.html" data-nav="process">Process</a></li>
+            <li><a href="/contact.html" data-nav="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="page-hero">
+        <div class="container container--narrow">
+          <p class="label label--moss">About</p>
+          <h1 class="page-hero__title">Our story</h1>
+          <hr class="rule-botanical page-hero__rule" />
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container container--narrow about-content">
+          <figure class="story-figure">
+            <div class="img-placeholder" role="img" aria-label="Grandfather and grandson — photo coming soon">
+              <span class="img-placeholder__text">Family photo</span>
+            </div>
+            <figcaption class="story-figure__caption">Grandfather &amp; grandson photo</figcaption>
+          </figure>
+
+          <div class="placeholder-block" aria-hidden="true">
+            <p class="placeholder-block__text">Section placeholder</p>
+          </div>
+          <div class="placeholder-block" aria-hidden="true">
+            <p class="placeholder-block__text">Section placeholder</p>
+          </div>
+          <div class="placeholder-block" aria-hidden="true">
+            <p class="placeholder-block__text">Section placeholder</p>
+          </div>
+
+          <div class="about-actions">
+            <a class="btn btn--primary" href="/honey.html">See what we make</a>
+            <a class="btn btn--secondary" href="/process.html">How we work</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <p class="site-footer__brand">The Honey Lab</p>
+            <address class="site-footer__address">El Cajon, California</address>
+          </div>
+          <div>
+            <p class="label site-footer__heading">Contact</p>
+            <ul class="site-footer__list">
+              <li><a href="mailto:hello@thehoneylab.com">hello@thehoneylab.com</a></li>
+              <li><a href="tel:+16195550100">(619) 555-0100</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="label site-footer__heading">Follow</p>
+            <ul class="site-footer__list site-footer__list--social">
+              <li><a href="https://instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+              <li><a href="https://facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="rule-botanical site-footer__rule" />
+        <nav class="site-footer__nav" aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/honey.html">Honey</a>
+          <a href="/products.html">Shop</a>
+          <a href="/process.html">Process</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+        <p class="site-footer__copy">&copy; <span id="year"></span> The Honey Lab</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

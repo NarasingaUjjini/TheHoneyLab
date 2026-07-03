@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact The Honey Lab in El Cajon, California. Order honey, ask questions, or join the batch list." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Contact — The Honey Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="contact">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-logo" href="/">The Honey Lab</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul class="site-nav__list">
+            <li><a href="/about.html" data-nav="about">About</a></li>
+            <li><a href="/honey.html" data-nav="honey">Honey</a></li>
+            <li><a href="/products.html" data-nav="products">Shop</a></li>
+            <li><a href="/process.html" data-nav="process">Process</a></li>
+            <li><a href="/contact.html" data-nav="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="page-hero">
+        <div class="container container--narrow">
+          <p class="label label--moss">Contact</p>
+          <h1 class="page-hero__title">Get in touch</h1>
+          <p class="page-hero__lead">Questions? We answer. Usually within a day.</p>
+          <hr class="rule-botanical page-hero__rule" />
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container contact-layout">
+          <div class="contact-info">
+            <ul class="contact-details">
+              <li>
+                <p class="label">Email</p>
+                <a href="mailto:hello@thehoneylab.com">hello@thehoneylab.com</a>
+              </li>
+              <li>
+                <p class="label">Phone</p>
+                <a href="tel:+16195550100">(619) 555-0100</a>
+              </li>
+              <li>
+                <p class="label">Location</p>
+                <p>El Cajon, California</p>
+              </li>
+            </ul>
+
+            <div class="contact-note card-paper">
+              <p>
+                <strong>To order now:</strong> email or call, or use the <a href="/products.html">shop page</a>.
+              </p>
+            </div>
+
+            <div class="contact-social">
+              <p class="label">Follow</p>
+              <a href="https://instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a>
+              <a href="https://facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-field">
+                <label class="label" for="contact-name">Name</label>
+                <input class="input" type="text" id="contact-name" name="name" required autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label class="label" for="contact-email">Email</label>
+                <input class="input" type="email" id="contact-email" name="email" required autocomplete="email" />
+              </div>
+              <div class="form-field">
+                <label class="label" for="contact-interest">I&rsquo;m interested in</label>
+                <select class="input" id="contact-interest" name="interest">
+                  <option>Honey</option>
+                  <option>Wholesale</option>
+                  <option>Beeswax</option>
+                  <option>Skincare</option>
+                  <option>General question</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label class="label" for="contact-message">Message</label>
+                <textarea class="input input--area" id="contact-message" name="message" rows="5" required></textarea>
+              </div>
+              <button class="btn btn--primary" type="submit">Send message</button>
+            </form>
+            <p class="contact-success" id="contact-success" hidden role="status">
+              Message sent. We&rsquo;ll get back to you soon.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="section section--store" aria-labelledby="store-heading">
+        <div class="container container--narrow">
+          <header class="section-header section-header--center">
+            <h2 id="store-heading" class="section-header__title">Shop</h2>
+            <p class="section-header__subtitle">
+              Pickup in El Cajon. Shipping around California soon.
+            </p>
+          </header>
+          <div id="store" class="store-embed">
+            <!-- E-commerce will be embedded here -->
+            <p class="store-embed__placeholder">
+              Order on the <a href="/products.html">shop page</a>.
+              Or leave your email below.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--signup" aria-labelledby="signup-heading">
+        <div class="container container--narrow">
+          <header class="section-header section-header--center">
+            <h2 id="signup-heading" class="section-header__title">New batch alerts</h2>
+            <p class="section-header__subtitle">
+              We only email when something new is ready. No spam.
+            </p>
+          </header>
+          <form class="signup-form" novalidate>
+            <label class="visually-hidden" for="email-contact">Email address</label>
+            <input class="input" type="email" id="email-contact" name="email" placeholder="Your email" required autocomplete="email" />
+            <button class="btn btn--primary" type="submit">Notify me</button>
+          </form>
+          <p class="signup-success" hidden role="status">You&rsquo;re on the list.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <p class="site-footer__brand">The Honey Lab</p>
+            <address class="site-footer__address">El Cajon, California</address>
+          </div>
+          <div>
+            <p class="label site-footer__heading">Contact</p>
+            <ul class="site-footer__list">
+              <li><a href="mailto:hello@thehoneylab.com">hello@thehoneylab.com</a></li>
+              <li><a href="tel:+16195550100">(619) 555-0100</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="label site-footer__heading">Follow</p>
+            <ul class="site-footer__list site-footer__list--social">
+              <li><a href="https://instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+              <li><a href="https://facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="rule-botanical site-footer__rule" />
+        <nav class="site-footer__nav" aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/honey.html">Honey</a>
+          <a href="/products.html">Shop</a>
+          <a href="/process.html">Process</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+        <p class="site-footer__copy">&copy; <span id="year"></span> The Honey Lab</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

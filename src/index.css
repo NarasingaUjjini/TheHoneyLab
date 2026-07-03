@@ -1,0 +1,294 @@
+/**
+ * The Honey Lab — Design System
+ * Handcrafted · Organic · California small-batch
+ */
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Karla", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", system-ui, sans-serif;
+
+  --color-honey: #b5722d;
+  --color-honey-light: #d4a054;
+  --color-honey-glow: #e8c88a;
+  --color-linen: #faf6ee;
+  --color-kraft: #e8dfd0;
+  --color-kraft-deep: #d9ceba;
+  --color-bark: #2c2118;
+  --color-bark-soft: #5c4d42;
+  --color-moss: #4f5e48;
+  --color-moss-light: #c5d4bc;
+  --color-clay: #a65d3e;
+  --color-wax: #f0e6d0;
+
+  --color-amber: #b5722d;
+  --color-cream: #faf6ee;
+  --color-sage: #4f5e48;
+  --color-umber: #2c2118;
+  --color-terracotta: #a65d3e;
+  --color-cream-dark: #e8dfd0;
+
+  --spacing-section: 4rem;
+  --spacing-section-lg: 6rem;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  --shadow-paper: 0 1px 2px rgb(44 33 24 / 0.04), 0 4px 12px rgb(44 33 24 / 0.06);
+  --shadow-lifted: 0 2px 4px rgb(44 33 24 / 0.05), 0 8px 24px rgb(44 33 24 / 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-bark);
+  background-color: var(--color-linen);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-honey) 22%, transparent);
+  color: var(--color-bark);
+}
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+
+.text-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.text-prose {
+  color: var(--color-bark-soft);
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-honey);
+  color: var(--color-linen);
+  box-shadow: var(--shadow-paper);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-clay);
+  box-shadow: var(--shadow-lifted);
+}
+
+.btn-secondary {
+  background-color: var(--color-kraft);
+  color: var(--color-bark);
+  border-color: var(--color-kraft-deep);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-honey);
+  color: var(--color-honey);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-bark-soft);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-ghost:hover {
+  color: var(--color-honey);
+}
+
+.surface-linen { background-color: var(--color-linen); }
+.surface-kraft { background-color: var(--color-kraft); }
+
+.surface-kraft-texture {
+  background-color: var(--color-kraft);
+  background-image:
+    linear-gradient(175deg, rgb(255 255 255 / 0.35) 0%, transparent 45%),
+    linear-gradient(var(--color-kraft-deep) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 3px;
+}
+
+.surface-moss {
+  background-color: color-mix(in srgb, var(--color-moss-light) 45%, var(--color-linen));
+}
+
+.card-paper {
+  background-color: var(--color-linen);
+  border: 1px solid var(--color-kraft-deep);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-paper);
+}
+
+.card-kraft {
+  background-color: var(--color-kraft);
+  border: 1px solid color-mix(in srgb, var(--color-kraft-deep) 80%, var(--color-bark));
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-paper);
+}
+
+.batch-stamp {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-bark-soft);
+  padding: 0.35rem 0.65rem;
+  border: 1.5px solid var(--color-bark-soft);
+  border-radius: var(--radius-sm);
+  transform: rotate(-2deg);
+  background: rgb(250 246 238 / 0.92);
+}
+
+.section {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: var(--spacing-section-lg);
+    padding-bottom: var(--spacing-section-lg);
+  }
+}
+
+.section-compact {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section-compact {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.container-main {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.rule-botanical {
+  height: 1px;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-kraft-deep) 15%,
+    var(--color-honey-light) 50%,
+    var(--color-kraft-deep) 85%,
+    transparent
+  );
+}
+
+.img-placeholder {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-kraft-deep);
+  background: linear-gradient(
+    145deg,
+    var(--color-kraft) 0%,
+    color-mix(in srgb, var(--color-honey-glow) 30%, var(--color-linen)) 100%
+  );
+}
+
+.link-natural {
+  color: var(--color-honey);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link-natural:hover {
+  color: var(--color-clay);
+}
+
+.input-natural {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-bark);
+  background-color: var(--color-linen);
+  border: 1px solid var(--color-kraft-deep);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-natural::placeholder {
+  color: color-mix(in srgb, var(--color-bark-soft) 55%, transparent);
+}
+
+.input-natural:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--color-honey) 50%, var(--color-kraft-deep));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-honey) 12%, transparent);
+}
+
+.hero-glow {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 40%, color-mix(in srgb, var(--color-honey-glow) 35%, transparent), transparent),
+    radial-gradient(ellipse 60% 50% at 85% 70%, color-mix(in srgb, var(--color-moss-light) 40%, transparent), transparent),
+    var(--color-linen);
+}

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Shop small-batch California honey from The Honey Lab. Orange blossom, alfalfa, wildflower and more." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Shop — The Honey Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="products">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-logo" href="/">The Honey Lab</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul class="site-nav__list">
+            <li><a href="/about.html" data-nav="about">About</a></li>
+            <li><a href="/honey.html" data-nav="honey">Honey</a></li>
+            <li><a href="/products.html" data-nav="products">Shop</a></li>
+            <li><a href="/process.html" data-nav="process">Process</a></li>
+            <li><a href="/contact.html" data-nav="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="page-hero">
+        <div class="container container--narrow">
+          <p class="label label--moss">Shop</p>
+          <h1 class="page-hero__title">Order honey</h1>
+          <p class="page-hero__lead">
+            8 and 12 oz jars. Pickup in El Cajon. Shipping around California.
+          </p>
+          <p class="page-hero__lead">
+            For tasting notes and where each batch came from, see the <a href="/honey.html">honey catalog</a>.
+          </p>
+          <hr class="rule-botanical page-hero__rule" />
+        </div>
+      </div>
+
+      <!--
+        ═══════════════════════════════════════════════════════════
+        ECWID INTEGRATION
+        ───────────────────────────────────────────────────────────
+        1. Open public/js/ecwid-config.js and set your storeId
+        2. Uncomment the script tag below (replace YOUR_STORE_ID)
+        3. In Ecwid admin, create each honey product with 8 oz / 12 oz options
+        4. Copy each Ecwid product ID into public/js/products.js → ecwidProductId
+        5. The floating cart icon appears automatically when Ecwid loads
+
+        Optional: full storefront embed for checkout (uncomment block at bottom)
+        ═══════════════════════════════════════════════════════════
+      -->
+      <div id="ecwid-cart-anchor" class="ecwid-cart-anchor" aria-live="polite">
+        <p id="cart-feedback" class="cart-feedback" hidden role="status"></p>
+      </div>
+
+      <section class="section section--compact-top" aria-labelledby="shop-heading">
+        <div class="container">
+          <h2 id="shop-heading" class="visually-hidden">Products</h2>
+          <div id="shop-grid" class="shop-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!--
+        Optional Ecwid full storefront (cart + checkout).
+        Uncomment after setting YOUR_STORE_ID:
+
+        <section class="section section--kraft" id="store" aria-label="Checkout">
+          <div class="container container--narrow">
+            <div id="my-store-YOUR_STORE_ID"></div>
+          </div>
+        </section>
+      -->
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <p class="site-footer__brand">The Honey Lab</p>
+            <address class="site-footer__address">El Cajon, California</address>
+          </div>
+          <div>
+            <p class="label site-footer__heading">Contact</p>
+            <ul class="site-footer__list">
+              <li><a href="mailto:hello@thehoneylab.com">hello@thehoneylab.com</a></li>
+              <li><a href="tel:+16195550100">(619) 555-0100</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="label site-footer__heading">Follow</p>
+            <ul class="site-footer__list site-footer__list--social">
+              <li><a href="https://instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+              <li><a href="https://facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="rule-botanical site-footer__rule" />
+        <nav class="site-footer__nav" aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/honey.html">Honey</a>
+          <a href="/products.html">Shop</a>
+          <a href="/process.html">Process</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+        <p class="site-footer__copy">&copy; <span id="year"></span> The Honey Lab</p>
+      </div>
+    </footer>
+
+  <!-- Ecwid config (edit store ID here) -->
+    <script src="/js/ecwid-config.js"></script>
+
+    <!--
+      ECWID STORE SCRIPT — uncomment and replace YOUR_STORE_ID when ready:
+
+      <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?YOUR_STORE_ID&data_platform=code&data_date=2026-01-01" charset="utf-8"></script>
+    -->
+
+    <script src="/js/products.js" defer></script>
+    <script src="/js/ecwid-cart.js" defer></script>
+    <script src="/js/products-purchase.js" defer></script>
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>
