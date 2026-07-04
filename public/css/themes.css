@@ -1,0 +1,537 @@
+/* ==========================================================================
+   The Honey Lab — Alternate styles (dev comparison)
+   Applied via data-theme on <html>. Paper is the default (styles.css).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Field Notes — batch logbook
+   Experience: practical, documentary, trustworthy. Feels like reading a
+   handwritten harvest log, not a brand brochure. Good for batch-tracking
+   authenticity and “we write things down.”
+   -------------------------------------------------------------------------- */
+[data-theme="field"] {
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-label: "IBM Plex Mono", ui-monospace, monospace;
+
+  --honey: #8a6a32;
+  --honey-light: #b08a4a;
+  --honey-glow: #d4c4a0;
+  --linen: #f3f0e8;
+  --kraft: #e4dfd2;
+  --kraft-deep: #cfc8b6;
+  --bark: #1a1a16;
+  --bark-soft: #4a4a42;
+  --moss: #4a5a3c;
+  --moss-light: #c2cbb4;
+  --clay: #6e4a2e;
+  --wax: #ebe4d4;
+
+  --radius: 0;
+  --btn-radius: 0;
+  --shadow-paper: none;
+  --shadow-lifted: 0 1px 0 var(--kraft-deep);
+
+  --container: 64rem;
+  --container-narrow: 38rem;
+  --header-bg: color-mix(in srgb, var(--linen) 96%, transparent);
+  --grain-opacity: 0.02;
+  --hero-glow-1: rgb(176 138 74 / 0.12);
+  --hero-glow-2: rgb(74 90 60 / 0.1);
+  --section-y: var(--space-12);
+  --label-tracking: 0.1em;
+}
+
+[data-theme="field"] h1,
+[data-theme="field"] h2,
+[data-theme="field"] h3,
+[data-theme="field"] .site-logo,
+[data-theme="field"] .hero__title,
+[data-theme="field"] .page-hero__title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="field"] .section-header,
+[data-theme="field"] .page-hero {
+  text-align: left;
+}
+
+[data-theme="field"] .section-header--center {
+  text-align: left;
+}
+
+[data-theme="field"] .section-header--center .section-header__rule,
+[data-theme="field"] .page-hero__rule {
+  margin-inline: 0;
+}
+
+[data-theme="field"] .showcase-card__link,
+[data-theme="field"] .shop-card,
+[data-theme="field"] .card-paper,
+[data-theme="field"] .catalog-entry__image {
+  border-radius: 0;
+  box-shadow: none;
+  border-left: 3px solid var(--honey);
+}
+
+[data-theme="field"] .showcase-card__link:hover {
+  transform: none;
+  box-shadow: none;
+  background: var(--kraft);
+}
+
+[data-theme="field"] .btn {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  padding: 0.7rem 1.25rem;
+}
+
+[data-theme="field"] .rule-botanical {
+  background: var(--kraft-deep);
+  height: 1px;
+}
+
+[data-theme="field"] .site-footer,
+[data-theme="field"] .section--kraft {
+  background-image: none;
+}
+
+/* --------------------------------------------------------------------------
+   Coastal — morning light
+   Experience: calm San Diego air — open, clean, unhurried. Less “rustic
+   craft fair,” more “local place you trust.” Soft and modern without
+   feeling corporate.
+   -------------------------------------------------------------------------- */
+[data-theme="coastal"] {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+  --font-label: var(--font-body);
+
+  --honey: #2f6f5e;
+  --honey-light: #5a9a86;
+  --honey-glow: #c5ddd4;
+  --linen: #f6f8f7;
+  --kraft: #e8eeeb;
+  --kraft-deep: #d0dbd6;
+  --bark: #1c2b28;
+  --bark-soft: #4a5c57;
+  --moss: #3d6b5a;
+  --moss-light: #c8ddd4;
+  --clay: #b07a3a;
+  --wax: #efe9df;
+
+  --radius: 12px;
+  --btn-radius: 999px;
+  --shadow-paper: 0 2px 8px rgb(28 43 40 / 0.04);
+  --shadow-lifted: 0 8px 28px rgb(28 43 40 / 0.08);
+
+  --container: 76rem;
+  --container-narrow: 44rem;
+  --header-bg: color-mix(in srgb, var(--linen) 88%, transparent);
+  --grain-opacity: 0.015;
+  --hero-glow-1: rgb(197 221 212 / 0.55);
+  --hero-glow-2: rgb(239 233 223 / 0.7);
+  --section-y: var(--space-20, 5rem);
+  --label-tracking: 0.16em;
+}
+
+[data-theme="coastal"] {
+  --space-20: 5rem;
+}
+
+[data-theme="coastal"] .hero__title,
+[data-theme="coastal"] .page-hero__title {
+  font-weight: 400;
+  font-variation-settings: "SOFT" 50, "WONK" 0.5;
+}
+
+[data-theme="coastal"] .section-header--center,
+[data-theme="coastal"] .page-hero {
+  text-align: center;
+}
+
+[data-theme="coastal"] .page-hero__lead {
+  margin-inline: auto;
+}
+
+[data-theme="coastal"] .section-header--center .section-header__rule,
+[data-theme="coastal"] .page-hero__rule {
+  margin-inline: auto;
+}
+
+[data-theme="coastal"] .hero-split__copy {
+  text-align: left;
+}
+
+[data-theme="coastal"] .showcase-card__link,
+[data-theme="coastal"] .shop-card,
+[data-theme="coastal"] .img-placeholder,
+[data-theme="coastal"] .catalog-entry__image {
+  border-radius: var(--radius);
+  border-color: transparent;
+  box-shadow: var(--shadow-paper);
+}
+
+[data-theme="coastal"] .showcase-card__link:hover {
+  transform: translateY(-4px);
+}
+
+[data-theme="coastal"] .btn {
+  padding: 0.85rem 1.75rem;
+}
+
+[data-theme="coastal"] .section--kraft,
+[data-theme="coastal"] .site-footer {
+  background-image: none;
+  border-color: var(--kraft-deep);
+}
+
+[data-theme="coastal"] .showcase-grid {
+  gap: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  [data-theme="coastal"] .showcase-grid {
+    gap: var(--space-8);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hearth — evening table
+   Experience: intimate and warm after dark — jars on the table, low light,
+   personal. Premium without luxury-brand gloss. Suits the grandfather /
+   kitchen-table story.
+   -------------------------------------------------------------------------- */
+[data-theme="hearth"] {
+  --font-display: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+  --font-label: var(--font-body);
+
+  --honey: #d4923a;
+  --honey-light: #e0a85a;
+  --honey-glow: #8a6230;
+  --linen: #16110e;
+  --kraft: #221a15;
+  --kraft-deep: #3a2c22;
+  --bark: #f0e6d4;
+  --bark-soft: #c4b49a;
+  --moss: #8fa87a;
+  --moss-light: #3a4a32;
+  --clay: #c4785a;
+  --wax: #2a2018;
+
+  --radius: 4px;
+  --btn-radius: 4px;
+  --shadow-paper: 0 2px 12px rgb(0 0 0 / 0.35);
+  --shadow-lifted: 0 8px 28px rgb(0 0 0 / 0.45);
+
+  --container: 70rem;
+  --container-narrow: 40rem;
+  --header-bg: color-mix(in srgb, var(--linen) 90%, transparent);
+  --grain-opacity: 0.05;
+  --hero-glow-1: rgb(212 146 58 / 0.12);
+  --hero-glow-2: rgb(196 120 90 / 0.08);
+  --section-y: var(--space-16);
+  --label-tracking: 0.18em;
+}
+
+[data-theme="hearth"] ::selection {
+  background: rgb(212 146 58 / 0.35);
+  color: var(--bark);
+}
+
+[data-theme="hearth"] .hero__title,
+[data-theme="hearth"] .page-hero__title,
+[data-theme="hearth"] .split-block__title,
+[data-theme="hearth"] .section-header__title {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="hearth"] .btn--primary {
+  color: #16110e;
+}
+
+[data-theme="hearth"] .btn--primary:hover {
+  color: #16110e;
+  background: var(--honey-light);
+}
+
+[data-theme="hearth"] .btn--secondary {
+  background: transparent;
+  color: var(--bark);
+  border-color: var(--kraft-deep);
+}
+
+[data-theme="hearth"] .btn--secondary:hover {
+  border-color: var(--honey);
+  color: var(--honey);
+}
+
+[data-theme="hearth"] .showcase-card__link,
+[data-theme="hearth"] .shop-card,
+[data-theme="hearth"] .img-placeholder,
+[data-theme="hearth"] .catalog-entry__image {
+  background: var(--kraft);
+  border-color: var(--kraft-deep);
+}
+
+[data-theme="hearth"] .section--kraft,
+[data-theme="hearth"] .section--signup,
+[data-theme="hearth"] .site-footer {
+  background-color: #120e0b;
+  background-image: none;
+  border-color: var(--kraft-deep);
+}
+
+[data-theme="hearth"] .site-footer__nav a {
+  color: color-mix(in srgb, var(--bark-soft) 85%, transparent);
+}
+
+[data-theme="hearth"] .site-footer__copy {
+  color: color-mix(in srgb, var(--bark-soft) 55%, transparent);
+}
+
+[data-theme="hearth"] .input,
+[data-theme="hearth"] .qty-picker__input {
+  background: var(--kraft);
+  color: var(--bark);
+  border-color: var(--kraft-deep);
+}
+
+[data-theme="hearth"] .batch-stamp {
+  background: var(--linen);
+  color: var(--honey);
+  border-color: var(--honey);
+}
+
+/* --------------------------------------------------------------------------
+   Market — stand at the market
+   Experience: friendly, approachable, ready to buy. Farmers-market energy
+   without cartoon branding. Stronger CTAs and clearer product focus —
+   good if shopping is the main job of the site.
+   -------------------------------------------------------------------------- */
+[data-theme="market"] {
+  --font-display: "Bitter", Georgia, "Times New Roman", serif;
+  --font-body: "Work Sans", system-ui, sans-serif;
+  --font-label: var(--font-body);
+
+  --honey: #c47a12;
+  --honey-light: #e09a2e;
+  --honey-glow: #f0d090;
+  --linen: #fff9f0;
+  --kraft: #f3e8d4;
+  --kraft-deep: #e0d0b4;
+  --bark: #2a2118;
+  --bark-soft: #5c4a38;
+  --moss: #3d5c3a;
+  --moss-light: #c5d4b0;
+  --clay: #9c3b45;
+  --wax: #f7edd8;
+
+  --radius: 8px;
+  --btn-radius: 8px;
+  --shadow-paper: 0 2px 6px rgb(42 33 24 / 0.06);
+  --shadow-lifted: 0 6px 20px rgb(42 33 24 / 0.1);
+
+  --container: 74rem;
+  --container-narrow: 42rem;
+  --header-bg: color-mix(in srgb, var(--linen) 94%, transparent);
+  --grain-opacity: 0.02;
+  --hero-glow-1: rgb(240 208 144 / 0.45);
+  --hero-glow-2: rgb(197 212 176 / 0.35);
+  --section-y: var(--space-12);
+  --label-tracking: 0.12em;
+}
+
+[data-theme="market"] .hero__title,
+[data-theme="market"] .page-hero__title {
+  font-weight: 600;
+}
+
+[data-theme="market"] .btn--primary {
+  font-weight: 600;
+  padding: 0.85rem 1.6rem;
+  box-shadow: 0 2px 0 color-mix(in srgb, var(--clay) 40%, var(--honey));
+}
+
+[data-theme="market"] .btn--primary:hover {
+  background: var(--clay);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--bark) 30%, var(--clay));
+}
+
+[data-theme="market"] .btn--secondary {
+  background: var(--linen);
+  border-width: 2px;
+}
+
+[data-theme="market"] .showcase-card__link,
+[data-theme="market"] .shop-card {
+  border-width: 2px;
+  border-color: var(--kraft-deep);
+}
+
+[data-theme="market"] .showcase-card__price,
+[data-theme="market"] .shop-card__price {
+  font-weight: 600;
+  color: var(--clay);
+}
+
+[data-theme="market"] .section--kraft {
+  background-color: #f7efe0;
+  background-image: none;
+}
+
+[data-theme="market"] .section--signup,
+[data-theme="market"] .sell-block {
+  background: color-mix(in srgb, var(--honey-glow) 35%, var(--linen));
+  border-color: var(--kraft-deep);
+}
+
+[data-theme="market"] .site-footer {
+  background: var(--bark);
+  background-image: none;
+  color: var(--linen);
+  border-top: none;
+}
+
+[data-theme="market"] .site-footer__brand,
+[data-theme="market"] .site-footer__address,
+[data-theme="market"] .site-footer__tagline,
+[data-theme="market"] .site-footer__heading,
+[data-theme="market"] .site-footer__list a,
+[data-theme="market"] .site-footer__nav a,
+[data-theme="market"] .site-footer__copy {
+  color: color-mix(in srgb, var(--linen) 88%, transparent);
+}
+
+[data-theme="market"] .site-footer__list a:hover,
+[data-theme="market"] .site-footer__nav a:hover {
+  color: var(--honey-light);
+}
+
+[data-theme="market"] .site-footer__rule {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--linen) 25%, transparent) 15%,
+    var(--honey-light) 50%,
+    color-mix(in srgb, var(--linen) 25%, transparent) 85%,
+    transparent
+  );
+}
+
+[data-theme="market"] .showcase-grid {
+  gap: var(--space-6);
+}
+
+/* ==========================================================================
+   Style picker (development only)
+   ========================================================================== */
+.style-picker {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 10000;
+  width: min(18.5rem, calc(100vw - 2rem));
+  font-family: system-ui, sans-serif;
+  color: #1a1a16;
+}
+
+.style-picker__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cfc8b6;
+  border-radius: 8px;
+  background: #faf6ee;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.12);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: inherit;
+}
+
+.style-picker__toggle:hover {
+  background: #fff;
+}
+
+.style-picker__panel {
+  display: none;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #cfc8b6;
+  border-radius: 8px;
+  background: #faf6ee;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 0.14);
+}
+
+.style-picker.is-open .style-picker__panel {
+  display: block;
+}
+
+.style-picker__intro {
+  margin: 0 0 0.65rem;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: #5c4d42;
+}
+
+.style-picker__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.style-picker__btn {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #d9ceba;
+  border-radius: 6px;
+  background: #fff;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.style-picker__btn:hover {
+  border-color: #b5722d;
+}
+
+.style-picker__btn.is-active {
+  border-color: #b5722d;
+  background: #f5ebe0;
+  box-shadow: inset 3px 0 0 #b5722d;
+}
+
+.style-picker__name {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.style-picker__desc {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+  color: #5c4d42;
+}
+
+@media (max-width: 480px) {
+  .style-picker {
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+}

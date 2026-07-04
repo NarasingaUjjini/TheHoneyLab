@@ -19,6 +19,20 @@ npm install
 npm run dev
 ```
 
+## Style picker (dev)
+
+A floating **Styles (dev)** control appears on every page. Use it to compare five looks:
+
+| Style | Intent |
+|-------|--------|
+| **Paper** | Current default — kitchen-table kraft, notebook feel |
+| **Field Notes** | Batch logbook — documentary, mono labels, square edges |
+| **Coastal** | Morning light — airy San Diego calm, soft and open |
+| **Hearth** | Evening table — dark, intimate, personal |
+| **Market** | Farmers-market stand — friendly, product-first |
+
+Choice is stored in `localStorage` and carries across pages. Remove `js/theme-picker.js` and `css/themes.css` (or keep only the chosen theme tokens) before a final production launch if you do not want the picker live.
+
 ## Build
 
 ```bash

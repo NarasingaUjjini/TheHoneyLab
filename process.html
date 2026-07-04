@@ -6,10 +6,21 @@
     <meta name="description" content="How The Honey Lab makes honey — from bloom to jar. Hive management, harvest, and batch testing in El Cajon." />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <title>Process — The Honey Lab</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("hl-theme") || "paper";
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "paper");
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Figtree:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Karla:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/themes.css" />
   </head>
   <body data-page="process">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -46,6 +57,18 @@
 
       <div class="section">
         <div class="container container--narrow process-content">
+          <section class="process-block" aria-labelledby="sustainability-heading">
+            <h2 id="sustainability-heading" class="process-block__title">Sustainability</h2>
+            <div class="prose">
+              <p>
+                Placeholder: how we care for the bees, the land, and the places we set hives.
+              </p>
+              <p>
+                Placeholder: what we leave alone, what we reuse, and how we try not to take more than a yard can give.
+              </p>
+            </div>
+          </section>
+
           <section class="process-block" aria-labelledby="forage-heading">
             <h2 id="forage-heading" class="process-block__title">Bees forage</h2>
             <div class="prose">
@@ -178,5 +201,6 @@
     </footer>
 
     <script src="js/main.js" defer></script>
+    <script src="js/theme-picker.js" defer></script>
   </body>
 </html>
