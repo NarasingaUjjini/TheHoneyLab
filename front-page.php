@@ -1,0 +1,150 @@
+<?php
+if (!defined('ABSPATH')) {
+    exit;
+}
+$GLOBALS['thl_show_footer_tagline'] = true;
+get_header();
+?>
+<main id="main">
+  <section class="hero hero--split" aria-labelledby="hero-heading">
+    <div class="container hero-split">
+      <div class="hero-split__copy">
+        <p class="label label--moss">El Cajon, California</p>
+        <h1 id="hero-heading" class="hero__title">From Bloom to Jar</h1>
+        <p class="hero__lead">
+          Honey from wherever the bees were that week. Numbered batches, tasted at our table before they go out.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="<?php echo esc_url(thl_get_page_url('products')); ?>">Shop honey</a>
+          <a class="btn btn--secondary" href="<?php echo esc_url(thl_get_page_url('contact')); ?>">Contact us</a>
+        </div>
+      </div>
+      <figure class="hero-split__figure">
+        <div class="img-placeholder img-placeholder--jar img-placeholder--hero" role="img" aria-label="Jar of raw honey on a wooden table">
+          <span class="img-placeholder__text">Hero product photo</span>
+        </div>
+        <figcaption class="hero-split__caption">Orange Blossom Batch 01 · Kern County</figcaption>
+      </figure>
+    </div>
+    <hr class="rule-botanical" />
+  </section>
+
+  <aside class="seasonal-note" aria-label="Current bloom">
+    <div class="container">
+      <p>
+        <span class="label label--moss">Current bloom</span>
+        Alfalfa, Imperial Valley
+      </p>
+    </div>
+  </aside>
+
+  <section class="section" id="honey" aria-labelledby="honey-heading">
+    <div class="container">
+      <header class="section-header">
+        <h2 id="honey-heading" class="section-header__title">Honey by batch</h2>
+        <p class="section-header__subtitle">
+          Ten kinds of honey from around California. 8 and 12 oz jars, labeled with where the bees were.
+        </p>
+        <hr class="rule-botanical section-header__rule" />
+      </header>
+      <div id="featured-products" class="showcase-grid" aria-live="polite"></div>
+      <div class="section-cta section-cta--stack">
+        <a class="btn btn--primary" href="<?php echo esc_url(thl_get_page_url('products')); ?>">See all ten batches</a>
+        <a class="section-cta__sub" href="<?php echo esc_url(thl_get_page_url('honey')); ?>#individuality">How we number batches</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--kraft" aria-labelledby="process-heading">
+    <div class="container">
+      <header class="section-header section-header--center">
+        <h2 id="process-heading" class="section-header__title">How it gets in the jar</h2>
+        <p class="section-header__subtitle">
+          Hives follow the seasons. We pull frames by hand and don't blend batches together.
+        </p>
+        <hr class="rule-botanical section-header__rule" />
+      </header>
+
+      <ol class="process-showcase">
+        <li class="process-showcase__item">
+          <div class="img-placeholder img-placeholder--process" role="img" aria-label="Bees on California wildflowers">
+            <span class="img-placeholder__text">Forage</span>
+          </div>
+          <h3 class="process-showcase__title">Bees forage</h3>
+          <p>Hives follow the bloom. Orange in spring, alfalfa in summer, hillsides when the rain holds.</p>
+        </li>
+        <li class="process-showcase__item">
+          <div class="img-placeholder img-placeholder--process" role="img" aria-label="Pulling a capped honey frame">
+            <span class="img-placeholder__text">Harvest</span>
+          </div>
+          <h3 class="process-showcase__title">We harvest</h3>
+          <p>Frames only when they're capped. We leave enough on the hive for winter.</p>
+        </li>
+        <li class="process-showcase__item">
+          <div class="img-placeholder img-placeholder--process" role="img" aria-label="Jars labeled by hand at the table">
+            <span class="img-placeholder__text">Jar &amp; label</span>
+          </div>
+          <h3 class="process-showcase__title">Jar &amp; label</h3>
+          <p>Numbered, noted, and tasted at our table in El Cajon. Grandpa still signs off.</p>
+        </li>
+      </ol>
+
+      <p class="section-cta section-cta--center">
+        <a class="text-link" href="<?php echo esc_url(thl_get_page_url('process')); ?>">The full process</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="story-heading">
+    <div class="container">
+      <div class="split-block">
+        <figure class="split-block__media">
+          <div class="img-placeholder img-placeholder--square" role="img" aria-label="Grandfather and grandson at the honey table">
+            <span class="img-placeholder__text">Family at the table</span>
+          </div>
+        </figure>
+        <div class="split-block__content">
+          <h2 id="story-heading" class="split-block__title">Two generations, one table</h2>
+          <div class="prose">
+            <p>
+              The Honey Lab is run by my grandfather and me out of El Cajon. He kept bees before I was born.
+              I jar everything by hand and write down what each batch tastes like.
+            </p>
+            <p>
+              Most days the lab is our kitchen table: jars in a row, a pen, and a notebook full of hive numbers.
+            </p>
+          </div>
+          <a class="text-link text-link--italic" href="<?php echo esc_url(thl_get_page_url('about')); ?>">Our story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--signup sell-block" aria-labelledby="order-heading">
+    <div class="container sell-block__inner">
+      <div class="sell-block__copy">
+        <h2 id="order-heading" class="sell-block__title">Want to order?</h2>
+        <p class="prose">
+          Pickup in El Cajon soon. Shipping around California too. For now, call or email us.
+          We usually get back to you within a day.
+        </p>
+        <div class="sell-block__actions">
+          <a class="btn btn--primary" href="<?php echo esc_url(thl_get_page_url('contact')); ?>">Contact us</a>
+          <a class="btn btn--secondary" href="<?php echo esc_url(thl_get_page_url('products')); ?>">Shop honey</a>
+        </div>
+      </div>
+      <div class="sell-block__form">
+        <p class="label">New batch alerts</p>
+        <p class="sell-block__form-lead">We'll email when a new batch is ready.</p>
+        <form class="signup-form" novalidate>
+          <label class="visually-hidden" for="email-home">Email</label>
+          <input class="input" type="email" id="email-home" name="email" placeholder="Your email" required autocomplete="email" />
+          <button class="btn btn--primary" type="submit">Notify me</button>
+        </form>
+        <p class="signup-success" hidden role="status">You&rsquo;re on the list.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<?php get_footer(); ?>
+
